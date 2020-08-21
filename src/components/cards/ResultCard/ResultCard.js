@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../context/GlobalState'
+import { GlobalContext } from '../../../context/GlobalState'
+import { ResultCardContainer, PosterWrapper, Info, Controls } from '../ResultCard/index'
+import { BTN } from '../../../styled'
 
 const ResultCard = ({ movie }) => {
   const { addMovieToWatchList, addMovieToWatched, watchList, watched } = useContext(GlobalContext);
@@ -9,8 +11,8 @@ const ResultCard = ({ movie }) => {
   const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
-    <div className="result-card">
-      <div className="poster-wrapper">
+    <ResultCardContainer className="result-card">
+      <PosterWrapper>
         {movie.poster_path ? (
           <img
             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
@@ -18,31 +20,31 @@ const ResultCard = ({ movie }) => {
           />
         ) : (<div className="filler-poster"></div>
           )}
-      </div>
+      </PosterWrapper>
 
-      <div className="info">
+      <Info>
         <div className="header">
           <h3 className="title">{movie.title}</h3>
           <h4 className="release-date">{movie.release_date ? movie.release_date.substring(0, 4) : '--'}</h4>
         </div>
-        <div className="controls">
-          <button
+        <Controls>
+          <BTN
             className="btn"
             disabled={watchListDisabled}
             onClick={() => addMovieToWatchList(movie)}
           >
             Add to Watchlist
-        </button>
-          <button
+        </BTN>
+          <BTN
             className="btn"
             disabled={watchedDisabled}
             onClick={() => addMovieToWatched(movie)}
           >
             Add to Watched
-        </button>
-        </div>
-      </div>
-    </div>
+        </BTN>
+        </Controls>
+      </Info>
+    </ResultCardContainer>
   )
 }
 

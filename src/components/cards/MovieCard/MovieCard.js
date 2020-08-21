@@ -1,9 +1,10 @@
 import React from 'react'
-import MovieControls from './MovieControls'
+import MovieControls from '../../layout/MovieControls'
+import { MovieCardContainer } from '../MovieCard/index'
 
 const MovieCard = ({ movie, type }) => {
   return (
-    <div className="movie-card">
+    <MovieCardContainer>
       <div className="overlay"></div>
       {movie.poster_path ? (
         <img
@@ -14,7 +15,7 @@ const MovieCard = ({ movie, type }) => {
         )}
 
       <MovieControls movie={movie} type={type} />
-    </div>
+    </MovieCardContainer>
   )
 }
 

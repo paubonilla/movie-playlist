@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Header from './components/Header'
-import WatchList from './components/WatchList'
-import Watched from './components/Watched'
-import Add from './components/Add'
-import './App.css';
+import Header from './components/layout/Header'
+import WatchList from './pages/WatchList/WatchList'
+import Watched from './pages/Watched/Watched'
+import Add from './pages/Add/Add'
+import './App.scss'
 import './lib/font-awesome/css/all.min.css'
 import { GlobalProvider } from './context/GlobalState'
 
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
