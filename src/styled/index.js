@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const AppContainer = styled.div`
+  padding: 3rem;
+  height: 100vh;
+  background: radial-gradient(#30475D, #1C1C2E);
+`
+
 export const Container = styled.div`
   padding-right: 15px;
   padding-left: 15px;

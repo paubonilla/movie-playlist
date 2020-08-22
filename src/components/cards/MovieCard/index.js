@@ -2,17 +2,20 @@ import styled from 'styled-components'
 
 export const MovieCardContainer = styled.div`
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   border: 0;
   display: block;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
   img {
     width: 100%;
     display: block;
+    border-radius: 10px;
   }
   &:hover .overlay {
     border: 3px solid #4DD3C2;
+    border-radius: 10px;
   }
   .overlay {
     position: absolute;

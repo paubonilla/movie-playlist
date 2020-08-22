@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  background-color: #C1A57A;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
   a {
     color: #ECECEC;
     font-size: 1.25rem;

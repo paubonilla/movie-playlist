@@ -11,7 +11,7 @@ export const PosterWrapper = styled.div`
     width: 75px;
     height: 113px;
     background-color: #dbdada;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 15px;
     display: block;
     color: transparent;

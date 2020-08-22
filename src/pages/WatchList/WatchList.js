@@ -1,31 +1,33 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
 import MovieCard from '../../components/cards/MovieCard/MovieCard'
+import { MoviePage, MovieGrid } from '../Watched/index'
+import { Container } from '../../styled'
 
 const WatchList = () => {
   const { watchList } = useContext(GlobalContext);
   return (
-    <div className="movie-page">
-      <div className="container">
+    <MoviePage>
+      <Container>
         <div className="header">
           <h1 className="heading">My Watchlist</h1>
           <span className="count-pill">{watchList.length} {watchList.length === 0 ? 'Movie' : 'Movies'}</span>
         </div>
         {watchList.length > 0 ? (
-          <div className="movie-grid">
+          <MovieGrid className="movie-grid">
             {watchList.map(movie => (
               <MovieCard
                 movie={movie}
                 type="watchList"
               />
             ))}
-          </div>
+          </MovieGrid>
         ) : (
             <h2 className="no-movies">No movies in your list</h2>
           )}
 
-      </div>
-    </div>
+      </Container>
+    </MoviePage>
   )
 }
 
