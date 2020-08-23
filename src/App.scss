@@ -3,23 +3,23 @@
 body {
   padding: 0;
   margin: 0;
-  max-width: none;
-}
-
-*,
-*:before,
-*:after {
   box-sizing: border-box;
+  max-width: none;
+  background: radial-gradient(#30475d, #1c1c2e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s ease;
 }
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
   padding: 5px 15px;
   font-size: 1.125rem;
+  @media (max-width: 320px) {
+    font-size: 10px;
+  }
   font-weight: 600;
-  border-radius: 999px;
-  color: var(--primary);
 }
 
 .ctrl-btn {
@@ -33,6 +33,6 @@ body {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: greenyellow;
   cursor: pointer;
 }

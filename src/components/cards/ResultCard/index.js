@@ -3,12 +3,20 @@ import styled from 'styled-components'
 export const ResultCardContainer = styled.div`
   display: flex;
   margin-bottom: 20px;
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const PosterWrapper = styled.div`
   img,
   .filler-poster {
     width: 75px;
+    @media (max-width: 320px) {
+      width: 100%;
+      height: 100%;
+    }
     height: 113px;
     background-color: #dbdada;
     border-radius: 10px;

@@ -6,6 +6,10 @@ export const AppContainer = styled.div`
   background: radial-gradient(#30475D, #1C1C2E);
 `
 
+export const AppInner = styled.div`
+  width: 100%;
+`
+
 export const Container = styled.div`
   padding-right: 15px;
   padding-left: 15px;
@@ -16,7 +20,7 @@ export const Container = styled.div`
 export const BTN = styled.button`
   padding: 10px 15px;
   background-color: #31475D;
-  color: var(--primary);
+  color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -27,7 +31,7 @@ export const BTN = styled.button`
   line-height: 1.1;
 
   &:hover {
-    background-color: #1aa762;
+    background-color: #b2ebf2;
     opacity: 1;
     cursor: pointer;
   }
@@ -37,3 +41,7 @@ export const BTN = styled.button`
     opacity: 0.5;
   }
 `
+
+export const ADD_BTN = styled(BTN)`
+  font-size: 10px;
+` 

@@ -7,19 +7,21 @@ import Add from './pages/Add/Add'
 import './App.scss'
 import './lib/font-awesome/css/all.min.css'
 import { GlobalProvider } from './context/GlobalState'
-import { AppContainer } from './styled'
+import { AppContainer, AppInner } from './styled'
 
 function App() {
   return (
     <GlobalProvider>
       <Router>
         <AppContainer>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={WatchList} />
-            <Route path="/watched" component={Watched} />
-            <Route path="/add" component={Add} />
-          </Switch>
+          <AppInner>
+            <Header />
+            <Switch>
+              <Route path="/" exact component={WatchList} />
+              <Route path="/watched" component={Watched} />
+              <Route path="/add" component={Add} />
+            </Switch>
+          </AppInner>
         </AppContainer>
       </Router>
     </GlobalProvider>

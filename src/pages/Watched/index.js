@@ -10,6 +10,9 @@ export const MoviePage = styled.div`
   }
   .heading {
     margin: 0;
+    @media (max-width: 320px) {
+      font-size: 25px;
+    }
   }
   .no-movies {
     color: #c4c4c4;
