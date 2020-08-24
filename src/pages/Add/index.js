@@ -9,6 +9,9 @@ export const AddContent = styled.div`
 export const InputWrapper = styled.div`
   input {
     width: 100%;
+    @media (max-width: 320px) {
+      width: 91%;
+    }
     background-color: #31475D;
     padding: 10px;
     border-radius: 5px;

@@ -17,6 +17,11 @@ export const Container = styled.div`
   margin-left: auto;
 `
 
+export const AddContainer = styled(Container)`
+  padding-right: 0;
+  padding-left: 0;
+`
+
 export const BTN = styled.button`
   padding: 10px 15px;
   background-color: #31475D;
@@ -29,6 +34,9 @@ export const BTN = styled.button`
   font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 
   &:hover {
     background-color: #b2ebf2;
@@ -44,4 +52,5 @@ export const BTN = styled.button`
 
 export const ADD_BTN = styled(BTN)`
   font-size: 10px;
+  margin: 0;
 ` 

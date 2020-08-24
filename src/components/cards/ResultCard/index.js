@@ -47,5 +47,8 @@ export const Info = styled.div`
 export const Controls = styled.div`
   button {
     margin-right: 10px;
+    @media (max-width: 320px) {
+      margin-right: 0;
+    }
   }
 `

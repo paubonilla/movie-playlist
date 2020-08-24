@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ResultCard from '../../components/cards/ResultCard/ResultCard'
 import { AddContent, InputWrapper, InputResults } from '../Add/index'
-import { Container } from '../../styled'
+import { AddContainer } from '../../styled'
 
 const Add = () => {
   const [query, setQuery] = useState("");
@@ -24,7 +24,7 @@ const Add = () => {
   }
 
   return (
-    <Container>
+    <AddContainer>
       <AddContent>
         <InputWrapper>
           <input
@@ -44,7 +44,7 @@ const Add = () => {
           </InputResults>
         )}
       </AddContent>
-    </Container>
+    </AddContainer>
   )
 }
 
