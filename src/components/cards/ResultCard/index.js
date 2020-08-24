@@ -12,12 +12,11 @@ export const ResultCardContainer = styled.div`
 export const PosterWrapper = styled.div`
   img,
   .filler-poster {
-    width: 75px;
+    width: 80%;
     @media (max-width: 320px) {
       width: 100%;
-      height: 100%;
     }
-    height: 113px;
+    height: 100%;
     background-color: #dbdada;
     border-radius: 10px;
     margin-right: 15px;
