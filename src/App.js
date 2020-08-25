@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import WatchList from './pages/WatchList/WatchList'
 import Watched from './pages/Watched/Watched'
@@ -13,19 +13,17 @@ import { AppContainer, AppInner } from './styled'
 function App() {
   return (
     <GlobalProvider>
-      <Router>
-        <AppContainer>
-          <AppInner>
-            <Header />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/watchlist" component={WatchList} />
-              <Route path="/watched" component={Watched} />
-              {/* <Route path="/add" component={Add} /> */}
-            </Switch>
-          </AppInner>
-        </AppContainer>
-      </Router>
+      <AppContainer>
+        <AppInner>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/watchlist" component={WatchList} />
+            <Route path="/watched" component={Watched} />
+            {/* <Route path="/add" component={Add} /> */}
+          </Switch>
+        </AppInner>
+      </AppContainer>
     </GlobalProvider>
   );
 }
