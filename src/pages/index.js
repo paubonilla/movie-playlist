@@ -24,6 +24,9 @@ export const MoviePage = styled.div`
 export const MovieGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   grid-gap: 30px;
   @media (min-width: 992px) {
     grid-template-columns: repeat(5, 1fr);

@@ -56,9 +56,9 @@ export const InnerContent = styled.div`
 export const InputWrapper = styled.div`
   input {
     margin: 0;
-    width: 100%;
+    width: 240%;
     @media (max-width: 320px) {
-      width: 91%;
+
     }
     background-color: #31475D;
     padding: 10px;

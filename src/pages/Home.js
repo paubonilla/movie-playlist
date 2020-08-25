@@ -1,9 +1,17 @@
 import React from 'react'
+import { MoviePage } from './index'
+import { Container } from '../styled'
 
 const Home = () => {
   return (
     <div>
-      Home Page
+      <MoviePage>
+        <Container>
+          <div className="header">
+            <h1 className="heading">Home page</h1>
+          </div>
+        </Container>
+      </MoviePage>
     </div>
   )
 }

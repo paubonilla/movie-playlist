@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
 import MovieCard from '../../components/cards/MovieCard/MovieCard'
-import { MoviePage, MovieGrid } from '../Watched/index'
+import { MoviePage, MovieGrid } from '../index'
 import { Container } from '../../styled'
 
 const WatchList = () => {

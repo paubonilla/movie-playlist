@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { HeaderContainer, InnerContent, InputWrapper, InputResults } from '../layout/index'
 import { Container } from '../../styled'
 import ResultCard from '../../components/cards/ResultCard/ResultCard'
+import Nav from '../Nav'
 
 const Header = () => {
   const [query, setQuery] = useState("");
@@ -12,7 +12,7 @@ const Header = () => {
     e.preventDefault();
     setQuery(e.target.value);
 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=true&query=${e.target.value}`)
 
       .then(res => res.json())
       .then((data) => {
@@ -36,20 +36,7 @@ const Header = () => {
                 onChange={onChange}
               />
             </InputWrapper>
-            <Link to="/" >
-              Name
-            </Link>
-            <ul className="nav-links">
-              <li>
-                <Link to="/watchlist">Watchlist</Link>
-              </li>
-              <li>
-                <Link to="/watched">Watched</Link>
-              </li>
-              {/* <li>
-                <Link to="/add"><ADD_BTN>add</ADD_BTN></Link>
-              </li> */}
-            </ul>
+            <Nav />
           </InnerContent>
         </Container>
       </HeaderContainer>
