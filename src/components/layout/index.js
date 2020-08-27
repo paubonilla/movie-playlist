@@ -9,27 +9,23 @@ export const HeaderContainer = styled.div`
 export const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 0;
-  .name {
-    @media (max-width: 480px) {
-      display: none;
-    }
-  }
-
-  .name a {
-    font-weight: 700;
-    font-size: 1.5rem;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 `
-
 
 export const InputWrapper = styled.div`
   input {
     margin: 0;
-    width: 240%;
+    width: 93%;
+    @media (max-width: 768px) {
+      width: 97%;
+    }
     @media (max-width: 320px) {
-
+      width: 90%;
     }
     background-color: #31475D;
     padding: 10px;

@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MenuItems } from './MenuItems'
 import { NavContainer } from './index'
+// import './Nav.scss'
 
 export default function Nav() {
   const [clicked, setClicked] = useState(false)
 
-  const handleClick = () => {
+  function handleClick() {
     setClicked({ clicked: !clicked })
   }
 

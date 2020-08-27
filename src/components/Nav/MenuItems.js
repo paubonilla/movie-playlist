@@ -2,8 +2,8 @@ export const MenuItems = [
   {
     title: 'Home',
     to: '/',
-    cName: 'nav-links',
-    aCName: 'active'
+    aCName: 'active',
+    cName: 'nav-links'
   },
   {
     title: 'Watchlist',
