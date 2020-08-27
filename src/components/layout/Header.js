@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { HeaderContainer, InnerContent, InputWrapper, InputResults } from '../layout/index'
 import { Container } from '../../styled'
 import ResultCard from '../../components/cards/ResultCard/ResultCard'
-import Nav from '../Nav'
+import Nav from '../Nav/Nav'
 
 const Header = () => {
   const [query, setQuery] = useState("");
