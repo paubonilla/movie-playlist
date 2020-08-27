@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const AppContainer = styled.div`
   padding: 3rem;
+  @media (max-width: 320px) {
+    padding: 2rem;
+  }
   /* background: radial-gradient(#30475D, #1C1C2E); */
 `
 

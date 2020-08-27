@@ -10,13 +10,23 @@ export const ResultCardContainer = styled.div`
 `
 
 export const PosterWrapper = styled.div`
-  img,
-  .filler-poster {
+  img {
     width: 80%;
     @media (max-width: 320px) {
       width: 100%;
     }
     height: 100%;
+    border-radius: 10px;
+    margin-right: 15px;
+    display: block;
+  }
+  .filler-poster {
+    width: 172px;
+    @media (max-width: 320px) {
+      width: 100%;
+      height: 330px;
+    }
+    height: 230px;
     background-color: #dbdada;
     border-radius: 10px;
     margin-right: 15px;
